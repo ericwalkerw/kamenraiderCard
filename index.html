@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background-image :url("./img/bg.jpg");
+            background-size: 100%;
+            filter: brightness(120%);
+        }
+        .blur {
+            background-color: hsla(0, 0%, 0%, 0.3);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .container {
+            margin: 50px auto;
+            position: relative;
+            width: 800px;
+            height: 800px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="Score"></div>
+    <div class="container">     
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="./Game/GameManeger.js"></script>
+</body>
+</html>
