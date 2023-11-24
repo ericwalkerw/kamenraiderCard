@@ -117,8 +117,8 @@ export class CoreGame {
       card2.flip(0.3, 1.3);
       this._data.score -= 500;
     }
-    this._score_txt.text = `SCORE : ${this._data.score}`;
     setTimeout(() => {
+      this._score_txt.text = `SCORE : ${this._data.score}`;
       this.openedCards = [];
     }, 2500);
   }

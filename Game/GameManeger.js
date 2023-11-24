@@ -48,8 +48,8 @@ class GameManager {
     replay.color = "white";
     replay.elm.onclick = () => {
       containerEL.replaceChildren();
-      const core = new CoreGame(this.data);
       this.data.score = 10000;
+      const core = new CoreGame(this.data);
     };
     document.body.appendChild(replay.elm);
   }
