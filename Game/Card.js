@@ -2,7 +2,7 @@ import { Node } from "../lib/Node.js";
 import { Sprite } from "../lib/Sprite.js";
 
 export class Card {
-  constructor(src, cover, x, y) {
+  constructor(src, cover) {
     this.node = new Node();
     this.sprite = new Sprite(src);
     this.cover = new Sprite(cover);
@@ -10,23 +10,16 @@ export class Card {
     this.node.addChild(this.cover);
     this.show = false;
     this.elm = this.node.elm;
-    this.posX = this.node.x;
-    this.posY = this.node.Y;
     this.uniqueID = this.sprite.id;
     this.isFlipped = false;
-    this.sizeX = x;
-    this.sizeY = y;
   }
 
   //#region GET
   get sizeX(){return this._sizeX;}
   get sizeY(){return this._sizeY;}
   get elm(){return this._elm;}
-  get posX(){return this._posX}
-  get posY(){return this._posY}
   get show() {return this._show;}
   //#endregion
-
 
   //#region SET
   set sizeX(value){
@@ -45,14 +38,6 @@ export class Card {
   set elm(value){
     this._elm = value;
     this.node.elm = value;
-  }
-  set posX(value){
-    this._posX = value;
-    this.node.x = value;
-  }
-  set posY(value){
-    this._posY = value;
-    this.node.y = value;
   }
   //#endregion
   
@@ -83,6 +68,7 @@ export class Card {
           duration: dur,
           onComplete: () => {
             this.node.removeChild(this.sprite);
+            this.node.elm.remove();
           },
         });
       },
