@@ -11,9 +11,9 @@ export class CoreGame {
       this.init();
   }
   init(){
-    const shufferData = sp.shuffle([...this._data.images,...this._data.images]);
-    const shufferData2 = ([...this._data.images,...this._data.images]);
-    this.createBoard(shufferData2);
+    const shuffleData = sp.shuffle([...this._data.images,...this._data.images]);
+    const shuffleData2 = ([...this._data.images,...this._data.images]);
+    this.createBoard(shuffleData2);
   }
   createText() {
     const scoreEl = document.querySelector(".Score");
@@ -31,7 +31,7 @@ export class CoreGame {
     return card;
   }
   createBoard(data) {
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < this._data.row * this._data.col; i++) {
       const newCard = this.createCard(
         data[i],
         this._data.cover,

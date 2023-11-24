@@ -1,6 +1,6 @@
 import { CoreGame } from "./CoreGame.js";
 
-class GameManeger {
+class GameManager {
   constructor() {
     this.data = {
       col: 5,
@@ -27,4 +27,4 @@ class GameManeger {
   }
 }
 
-const game = new GameManeger();
+const game = new GameManager();
