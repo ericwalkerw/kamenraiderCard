@@ -13,7 +13,7 @@ export class CoreGame {
   init(){
     const shuffleData = sp.shuffle([...this._data.images,...this._data.images]);
     const shuffleData2 = ([...this._data.images,...this._data.images]);
-    this.createBoard(shuffleData2);
+    this.createBoard(shuffleData);
   }
   createText() {
     const scoreEl = document.querySelector(".Score");
