@@ -18,7 +18,7 @@ export class CoreGame {
   createText() {
     const scoreEl = document.querySelector(".Score");
     const score_txt = new Label("SCORE : 10000");
-    score_txt.size = 50;
+    score_txt.size = 48;
     score_txt.font = "arial";
     score_txt.color = "red";
     scoreEl.appendChild(score_txt.elm);

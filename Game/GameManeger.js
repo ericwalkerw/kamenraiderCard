@@ -5,9 +5,9 @@ class GameManager {
     this.data = {
       col: 5,
       row: 4,
-      gap:10,
-      width: 150,
-      height: 200,
+      gap:20,
+      width: 130,
+      height: 180,
       score: 10000,
       cover: "./img/cover.jpg",
       images: [
